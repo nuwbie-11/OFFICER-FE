@@ -7,7 +7,7 @@ function login(data) {
         url: `${process.env.REACT_APP_LOCAL_APP}/user/auth`,
         headers: {
             'Content-Type': 'application/json',
-                      "Access-Control-Allow-Credentials": true,
+            "Access-Control-Allow-Credentials": true,
         },
         data: data
     }
@@ -21,7 +21,7 @@ function register(data) {
         url: `${process.env.REACT_APP_LOCAL_APP}/user/create`,
         headers: {
             'Content-Type': 'application/json',
-                      "Access-Control-Allow-Credentials": true,
+            "Access-Control-Allow-Credentials": true,
         },
         data: data
     }
@@ -36,7 +36,6 @@ function readUser(id) {
         url: `${process.env.REACT_APP_LOCAL_APP}/user/read/${id}`,
         headers: {
             'Content-Type': 'application/json',
-                      "Access-Control-Allow-Credentials": true,
         },
     }
     return objList;
@@ -48,7 +47,6 @@ function listLog(params) {
         url: `${process.env.REACT_APP_LOCAL_APP}/daily-log/list${params}`,
         headers: {
             'Content-Type': 'application/json',
-                      "Access-Control-Allow-Credentials": true,
         },
     }
     return objList;
@@ -61,7 +59,7 @@ function approveLog(data, id) {
         url: `${process.env.REACT_APP_LOCAL_APP}/daily-log/approve/${id}`,
         headers: {
             'Content-Type': 'application/json',
-                      "Access-Control-Allow-Credentials": true,
+            "Access-Control-Allow-Credentials": true,
         },
         data: data
     }
@@ -75,7 +73,7 @@ function log(data) {
         url: `${process.env.REACT_APP_LOCAL_APP}/daily-log/create`,
         headers: {
             'Content-Type': 'application/json',
-                      "Access-Control-Allow-Credentials": true,
+            "Access-Control-Allow-Credentials": true,
         },
         data: data
     }

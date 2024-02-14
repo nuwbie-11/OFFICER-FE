@@ -34,7 +34,6 @@ function readData(id) {
         url: `${process.env.REACT_APP_LOCAL_APP}/provinsi/read/${id}`,
         headers: {
             'Content-Type': 'application/json',
-            "Access-Control-Allow-Credentials": true,
         }
     }
 
