@@ -11,7 +11,9 @@ const HelloWorldPage = lazy(()=>import('./pages/HelloWorld'))
 const PredikatKerja = lazy(()=>import('./pages/PredikatKerja'))
 const Provinsi = lazy(()=>import('./pages/Provinsi'))
 const EditProvinsi = lazy(()=>import('./pages/Provinsi/EditProvinsi'))
-
+const Login = lazy(()=>import('./pages/HarianLog/index'))
+const DailyLogTable = lazy(()=>import('./pages/HarianLog/HarianLogTable'))
+const DailyLogStaff = lazy(()=>import('./pages/HarianLog/HarianLogTableStaff'))
 
 function App() {
   const location = useLocation();
@@ -19,7 +21,6 @@ function App() {
   const [isLoading,setIsLoading] = useState(true);
 
   useEffect(()=>{
-    // console.log("HELLO REACT")
     setIsLoading(false)
   },[])
 
@@ -33,6 +34,10 @@ function App() {
         <Route path="/provinsi" element={ <Suspense fallback={<Loading/>} ><Provinsi/></Suspense> } />
         <Route path="/provinsi/edit/:id" element={ <Suspense fallback={<Loading/>} ><EditProvinsi/></Suspense> } />
         <Route path="/provinsi/create" element={ <Suspense fallback={<Loading/>} ><EditProvinsi/></Suspense> } />
+
+        <Route path="/daily-log/" element={ <Suspense fallback={<Loading/>} ><DailyLogTable/></Suspense> } />
+        <Route path="/daily-log/staff" element={ <Suspense fallback={<Loading/>} ><DailyLogStaff/></Suspense> } />
+        <Route path="/daily-log/login" element={ <Suspense fallback={<Loading/>} ><Login/></Suspense> } />
       </Routes>
     </Layout>
   )

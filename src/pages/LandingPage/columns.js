@@ -2,7 +2,7 @@ export const menus = [
     {
        name:"CRUD Log Harian",
        description:"This is A description. Behold my description",
-       url:"/log-harian" 
+       url:"/daily-log/login"
     },
     {
         name:"CRUD Provinsi",
