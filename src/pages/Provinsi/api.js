@@ -6,7 +6,6 @@ function listData(params) {
         url: `${process.env.REACT_APP_LOCAL_APP}/provinsi/list${params}`,
         headers: {
             'Content-Type': 'application/json',
-            "Access-Control-Allow-Credentials": true,
         }
     }
 
@@ -62,7 +61,6 @@ function deleteData(id) {
         url: `${process.env.REACT_APP_LOCAL_APP}/provinsi/delete/${id}`,
         headers: {
             'Content-Type': 'application/json',
-            "Access-Control-Allow-Credentials": true,
         },
     }
 
