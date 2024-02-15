@@ -15,11 +15,9 @@ function listData(params) {
 function createData(data) {
     const objList = {
         method: 'post',
-        credentials: "include",
         url: `${process.env.REACT_APP_LOCAL_APP}/provinsi/create`,
         headers: {
             'Content-Type': 'application/json',
-            "Access-Control-Allow-Credentials": true,
         },
         data: data
     }
@@ -42,11 +40,9 @@ function readData(id) {
 function updateData(data, id) {
     const objList = {
         method: 'put',
-        credentials: "include",
         url: `${process.env.REACT_APP_LOCAL_APP}/provinsi/update/${id}`,
         headers: {
             'Content-Type': 'application/json',
-            "Access-Control-Allow-Credentials": true,
 
         },
         data: data
